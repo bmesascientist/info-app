@@ -1,0 +1,44 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: info-app-ingressroute
+  namespace: default
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`app.localhost`)
+      kind: Rule
+      services:
+        - name: info-app-service
+          port: 80
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: info-app-ingressroute
+  namespace: customer-1
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`customer-1.localhost`)
+      kind: Rule
+      services:
+        - name: info-app-service
+          port: 80
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: info-app-ingressroute
+  namespace: customer-2
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`customer-2.localhost`)
+      kind: Rule
+      services:
+        - name: info-app-service
+          port: 80

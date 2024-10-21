@@ -1,0 +1,30 @@
+replicaCount: 1
+
+image:
+  repository: sakuraocha/info-app
+  tag: v1
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  hosts:
+    - host: app.localhost
+      paths: ["/"]
+    - host: customer-1.localhost
+      paths: ["/"]
+    - host: customer-2.localhost
+      paths: ["/"]
+
+namespace:
+  enabled: true
+  names:
+    - default
+    - customer-1
+    - customer-2
+
+networkPolicy:
+  enabled: true

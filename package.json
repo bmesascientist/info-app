@@ -1,0 +1,13 @@
+{
+  "name": "info-app",
+  "version": "1.0.0",
+  "description": "A NodeJS application that returns Namespace, Pod, and Node information.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "express": "^4.21.1"
+  }
+}
