@@ -124,7 +124,7 @@ If you wanna build the Docker image, you can do it as follows:
     kubectl port-forward --address 0.0.0.0 service/prometheus-server-ext 9090:80
    ```
 
-3. **Access the Prometheus with `curl` outside of VM:**
+3. **Access the Prometheus outside of VM:**
 
    ```
     <node_ip>:9090
