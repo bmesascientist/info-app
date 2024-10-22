@@ -90,7 +90,9 @@ If you wanna build the Docker image, you can do it as follows:
 
 2. **Access the dashboard with `curl` outside of VM:**
 
-`<node_ip>:9000`
+   ```
+    <node_ip>:9000
+   ```
 
 #### Promethes
 
@@ -124,7 +126,9 @@ If you wanna build the Docker image, you can do it as follows:
 
 3. **Access the Prometheus with `curl` outside of VM:**
 
-`<node_ip>:9090`
+   ```
+    <node_ip>:9090
+   ```
 
 4. **Get simple metrics for CPU and Memory:**
 
