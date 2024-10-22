@@ -17,13 +17,13 @@ Info-App is a NodeJS application for return Namespace, Pod, and Node information
    ```bash
     git clone https://github.com/bmesascientist/info-app.git
 
-    cd info-app
+    cd info-app/
    ```
 
 2. **Make the setup and deploy scripts executable:**
 
    ```bash
-    chmod server-setup.sh scripts/deploy-app.sh
+    chmod server-setup.sh deploy-app.sh
    ```
 
 3. **Setup Docker and update the server with basic shell script:**
