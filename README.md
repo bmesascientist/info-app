@@ -88,7 +88,7 @@ If you wanna build the Docker image, you can do it as follows:
     kubectl apply -f traefik-dashboard.yaml
    ```
 
-2. **Access the dashboard with `curl` outside of VM:**
+2. **Access the dashboard outside of VM:**
 
    ```
     <node_ip>:9000
