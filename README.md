@@ -23,7 +23,7 @@ Info-App is a NodeJS application for return Namespace, Pod, and Node information
 2. **Make the setup and deploy scripts executable:**
 
    ```bash
-    chmod server-setup.sh deploy-app.sh
+    chmod u+x server-setup.sh deploy-app.sh
    ```
 
 3. **Setup Docker and update the server with basic shell script:**
