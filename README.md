@@ -90,7 +90,7 @@ If you wanna build the Docker image, you can do it as follows:
 
 2. **Access the dashboard outside of VM:**
 
-   ```
+   ```json
     <node_ip>:9000
    ```
 
@@ -126,7 +126,7 @@ If you wanna build the Docker image, you can do it as follows:
 
 3. **Access the Prometheus outside of VM:**
 
-   ```
+   ```json
     <node_ip>:9090
    ```
 
