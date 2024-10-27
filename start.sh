@@ -1,7 +1,9 @@
 #!/bin/bash
 
-./server-setup.sh
+chmod u+x server-setup.sh deploy-app.sh traefik-dashboard.sh
 
-./deploy-app.sh
+sudo ./server-setup.sh
+
+sudo ./deploy-app.sh
 
 . traefik-dashboard.sh
