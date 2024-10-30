@@ -23,8 +23,6 @@ kubectl apply -f traefik.yaml
 
 kubectl apply -f network-policy.yaml
 
-kubectl apply -f traefik-dashboard.yaml
-
 lines_to_add="127.0.0.1 app.localhost
 127.0.0.1 customer-1.localhost
 127.0.0.1 customer-2.localhost"

@@ -4,8 +4,6 @@ helm repo add prometheus-community https://prometheus-community.github.io/helm-c
 
 helm repo update
 
-sudo chown $USER /etc/rancher/k3s/k3s.yaml
-
 export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 
 helm install prometheus prometheus-community/prometheus
