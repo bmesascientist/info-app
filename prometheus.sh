@@ -18,3 +18,5 @@ done
 echo "Prometheus up and running!"
 
 kubectl expose service prometheus-server --type=NodePort --target-port=9090 --name=prometheus-server-ext
+
+kubectl port-forward --address 0.0.0.0 service/prometheus-server-ext 9090:80 &
