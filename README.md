@@ -92,7 +92,7 @@ curl customer-1.localhost
 curl customer-2.localhost
 ```
 
-#### Traefik Dashboard
+### Traefik Dashboard
 
 1. **Get pod name:**
 
@@ -124,7 +124,7 @@ k3s kubectl port-forward pod_name -n kube-system 9000:9000 --address 0.0.0.0 &
 - Example:
 
 ```bash
-ubuntu@server:~$ sudo k3s kubectl port-forward traefik-d7c9c5778-89dgp -n kube-system 9000:9000 --address 0.0.0.0
+ubuntu@server:~$ k3s kubectl port-forward traefik-d7c9c5778-89dgp -n kube-system 9000:9000 --address 0.0.0.0 &
 
 Forwarding from 0.0.0.0:9000 -> 9000
 ```
@@ -150,7 +150,7 @@ server   Ready    control-plane,master   20m   v1.30.6+k3s1   172.16.66.137   <n
 <node_ip>:9000/dashboard/#/
 ```
 
-#### Prometheus
+### Prometheus
 
 1. **Setup:**
 
@@ -173,11 +173,11 @@ helm install prometheus prometheus-community/prometheus
 2. **Port-forward:**
 
 ```bash
-kubectl expose service prometheus-server --type=NodePort --target-port=9090 --name=prometheus-server-ext
+k3s kubectl expose service prometheus-server --type=NodePort --target-port=9090 --name=prometheus-server-ext
 ```
 
 ```bash
-kubectl port-forward --address 0.0.0.0 service/prometheus-server-ext 9090:80
+k3s kubectl port-forward --address 0.0.0.0 service/prometheus-server-ext 9090:80
 ```
 
 3. **Access the Prometheus outside of VM:**

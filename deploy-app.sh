@@ -9,7 +9,7 @@ curl -sfL https://get.k3s.io | sh -
 sudo snap install helm --classic
 
 echo "Waiting for K3S..."
-while [[ $(kubectl get pods --all-namespaces --field-selector=status.phase!=Running,status.phase!=Succeeded | wc -l) -ne 0 ]]; do
+while [[ $(k3s kubectl get pods --all-namespaces --field-selector=status.phase!=Running,status.phase!=Succeeded | wc -l) -ne 0 ]]; do
   echo "Not yet started..."
   sleep 20
 done
