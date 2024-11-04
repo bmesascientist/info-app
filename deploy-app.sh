@@ -15,13 +15,13 @@ while [[ $(kubectl get pods --all-namespaces --field-selector=status.phase!=Runn
 done
 echo "K3S up and running!"
 
-kubectl apply -f namespace.yaml
+k3s kubectl apply -f namespace.yaml
 
-kubectl apply -f deployment.yaml
+k3s kubectl apply -f deployment.yaml
 
-kubectl apply -f traefik.yaml
+k3s kubectl apply -f traefik.yaml
 
-kubectl apply -f network-policy.yaml
+k3s kubectl apply -f network-policy.yaml
 
 lines_to_add="127.0.0.1 app.localhost
 127.0.0.1 customer-1.localhost

@@ -6,6 +6,6 @@ sudo ./server-setup.sh
 
 sudo ./deploy-app.sh
 
-./traefik-dashboard.sh
-
 . prometheus.sh
+
+./traefik-dashboard.sh

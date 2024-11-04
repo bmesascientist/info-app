@@ -94,22 +94,60 @@ curl customer-2.localhost
 
 #### Traefik Dashboard
 
-1. **Activate:**
+1. **Get pod name:**
 
 ```bash
-kubectl apply -f traefik-dashboard.yaml
+k3s kubectl get pod -n kube-system
+```
+
+- Example:
+
+```bash
+ubuntu@server:~$ k3s kubectl get pod -n kube-system
+
+NAME                                      READY   STATUS      RESTARTS   AGE
+coredns-7b98449c4-x9f8w                   1/1     Running     0          82s
+helm-install-traefik-6l4wz                0/1     Completed   1          82s
+helm-install-traefik-crd-b5mb9            0/1     Completed   0          82s
+local-path-provisioner-595dcfc56f-l8gsh   1/1     Running     0          82s
+metrics-server-cdcc87586-x768n            1/1     Running     0          82s
+svclb-traefik-04867f53-rfqch              2/2     Running     0          45s
+traefik-d7c9c5778-89dgp                   1/1     Running     0          45s
+```
+
+2. **Activate the dashboard:**
+
+```bash
+k3s kubectl port-forward pod_name -n kube-system 9000:9000 --address 0.0.0.0 &
+```
+
+- Example:
+
+```bash
+ubuntu@server:~$ sudo k3s kubectl port-forward traefik-d7c9c5778-89dgp -n kube-system 9000:9000 --address 0.0.0.0
+
+Forwarding from 0.0.0.0:9000 -> 9000
 ```
 
 2. **Get Node IP:**
 
 ```bash
-kubectl get nodes -o wide
+k3s kubectl get nodes -o wide
+```
+
+- Example:
+
+```bash
+ubuntu@server:~$ k3s kubectl get nodes -o wide
+
+NAME     STATUS   ROLES                  AGE   VERSION        INTERNAL-IP     EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION     CONTAINER-RUNTIME
+server   Ready    control-plane,master   20m   v1.30.6+k3s1   172.16.66.137   <none>        Ubuntu 24.04.1 LTS   6.8.0-48-generic   containerd://1.7.22-k3s1
 ```
 
 3. **Access the dashboard outside of VM:**
 
 ```text
-<node_ip>:9000
+<node_ip>:9000/dashboard/#/
 ```
 
 #### Prometheus
