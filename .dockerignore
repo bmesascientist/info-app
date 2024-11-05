@@ -1,7 +1,1 @@
-.old/
-aws-eks/
-helm-cart/
-*.yaml
-*.sh
-*.md
-LICENSE
+info-app/node_modules

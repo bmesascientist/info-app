@@ -1,11 +1,11 @@
 #!/bin/bash
 
-chmod u+x server-setup.sh deploy-app.sh traefik-dashboard.sh prometheus.sh
+chmod u+x scripts/*.sh
 
-sudo ./server-setup.sh
+sudo ./scripts/server-setup.sh
 
-sudo ./deploy-app.sh
+sudo ./scripts/deploy-app.sh
 
-. prometheus.sh
+. ./scripts/prometheus.sh
 
-./traefik-dashboard.sh
+./scripts/traefik-dashboard.sh

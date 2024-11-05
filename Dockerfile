@@ -2,11 +2,11 @@ FROM node:lts-alpine
 
 WORKDIR /usr/src/app
 
-COPY package.json ./
+COPY info-app/package.json ./
 
 RUN npm install
 
-COPY . .
+COPY info-app/. .
 
 ENV NAMESPACE=""
 ENV POD_NAME=""
