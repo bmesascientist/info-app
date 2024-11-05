@@ -5,7 +5,7 @@ Info-App is a NodeJS application for return Namespace, Pod, and Node information
 - Example output:
 
 ```bash
-user@server:~$ curl app.localhost
+ubuntu@server:~$ curl app.localhost
 
 {
   "namespace": "default",
