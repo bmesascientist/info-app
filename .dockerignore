@@ -1,7 +1,7 @@
-helm-chart/
-deployment.yaml
-k3s-setup.sh
-namespace.yaml
-network-policy.yaml
-traefik.yaml
+.old/
+aws-eks/
+helm-cart/
+*.yaml
+*.sh
 *.md
+LICENSE

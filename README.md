@@ -2,9 +2,29 @@
 
 Info-App is a NodeJS application for return Namespace, Pod, and Node information from a Kubernetes cluster. This application can be deployed on local K3S cluster.
 
+- Example output:
+
+```bash
+user@server:~$ curl app.localhost
+
+{
+  "namespace": "default",
+  "pod": {
+    "name": "info-app-5cb74ff5df-g5w95",
+    "ip": "10.42.0.10"
+  },
+  "node": {
+    "name": "server",
+    "ip": "172.16.66.137"
+  }
+}
+```
+
 ## Requirements
 
 - Ubuntu Server 24.04.1
+
+- K3S (Will be installed with setup script)
 
 ## Table of Contents
 
