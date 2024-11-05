@@ -55,13 +55,13 @@ cd info-app/
 2. **Make the setup and deploy scripts executable:**
 
 ```bash
-chmod u+x server-setup.sh deploy-app.sh
+chmod u+x scripts/server-setup.sh scripts/deploy-app.sh
 ```
 
 3. **Setup Docker and update the server with basic shell script:**
 
 ```bash
-./server-setup.sh
+./scripts/server-setup.sh
 ```
 
 ## Deployment
@@ -69,7 +69,7 @@ chmod u+x server-setup.sh deploy-app.sh
 1. **Deploy the application:**
 
 ```bash
-./deploy-app.sh
+./scripts/deploy-app.sh
 ```
 
 ### Docker
