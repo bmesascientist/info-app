@@ -19,6 +19,8 @@ k3s kubectl apply -f namespace.yaml
 
 k3s kubectl apply -f deployment.yaml
 
+k3s kubectl apply -f service.yaml
+
 k3s kubectl apply -f traefik.yaml
 
 k3s kubectl apply -f network-policy.yaml

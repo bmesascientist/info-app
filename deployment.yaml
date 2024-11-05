@@ -47,18 +47,6 @@ spec:
               cpu: 200m
               memory: 256Mi
 ---
-apiVersion: v1
-kind: Service
-metadata:
-  name: info-app-service
-spec:
-  selector:
-    app: info-app
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 3000
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -108,19 +96,6 @@ spec:
               cpu: 200m
               memory: 256Mi
 ---
-apiVersion: v1
-kind: Service
-metadata:
-  name: info-app-service
-  namespace: customer-1
-spec:
-  selector:
-    app: info-app
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 3000
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -169,16 +144,3 @@ spec:
             limits:
               cpu: 200m
               memory: 256Mi
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: info-app-service
-  namespace: customer-2
-spec:
-  selector:
-    app: info-app
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 3000
