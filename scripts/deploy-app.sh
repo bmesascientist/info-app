@@ -21,6 +21,8 @@ k3s kubectl apply -f k8s-deployment/deployment.yaml
 
 k3s kubectl apply -f k8s-deployment/service.yaml
 
+k3s kubectl apply -f k8s-deployment/hpa.yaml
+
 k3s kubectl apply -f k8s-deployment/traefik.yaml
 
 k3s kubectl apply -f k8s-deployment/network-policy.yaml
